@@ -7,3 +7,5 @@
 /move_o/.vs/move_o/v15/Browse.VC.db
 /move_o/.vs/move_o/v15/Browse.VC.opendb
 /change_color_touch/.vs/change_color_touch/v15/Browse.VC.opendb
+*.ipch
+*.opendb
