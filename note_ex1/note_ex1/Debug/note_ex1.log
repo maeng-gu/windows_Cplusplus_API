@@ -1,0 +1,6 @@
+﻿  cpp.cpp
+c:\users\user\documents\github\windows_cplusplus_api\note_ex1\note_ex1\cpp.cpp(60): warning C4066: 와이드 문자 상수에서 첫 문자 뒤의 문자는 무시됩니다.
+c:\users\user\documents\github\windows_cplusplus_api\note_ex1\note_ex1\cpp.cpp(89): error C2086: 'HBRUSH hBrush': 재정의
+  c:\users\user\documents\github\windows_cplusplus_api\note_ex1\note_ex1\cpp.cpp(79): note: 'hBrush' 선언을 참조하십시오.
+c:\users\user\documents\github\windows_cplusplus_api\note_ex1\note_ex1\cpp.cpp(89): error C2086: 'HBRUSH OldBrush': 재정의
+  c:\users\user\documents\github\windows_cplusplus_api\note_ex1\note_ex1\cpp.cpp(79): note: 'OldBrush' 선언을 참조하십시오.
