@@ -121,6 +121,40 @@ LRESULT CALLBACK Dlg6_2Proc(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM lPar
 				hdc = GetDC(hDlg);
 				TextOut(hdc, 0, 0, _T("Hello World"), 11);
 				ReleaseDC(hDlg, hdc); break;
+				if (wParam == VK_RIGHT)
+				{
+					if (x < 1360)
+					{
+						x += 40;
+					}
+				}
+
+				if (wParam == VK_LEFT)
+				{
+					if (x > 20)
+						x -= 40;
+				}
+
+
+				if (wParam == VK_UP)
+				{
+					if (y > 20)
+						y -= 40;
+				}
+
+				if (wParam == VK_DOWN)
+				{
+					if (y < 660)
+						y += 40;
+				}
+
+				if (wParam == VK_HOME) {
+					x = 20;
+					y = 20;
+				}
+
+				InvalidateRgn(hwnd, NULL, TRUE);
+				break;
 			case ID_BUTTON_END:
 				EndDialog(hDlg, 0);
 				break;
@@ -128,51 +162,7 @@ LRESULT CALLBACK Dlg6_2Proc(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM lPar
 				EndDialog(hDlg, 0);
 				break;
 		}
-	}
-	return 0;
-}
-
-	case WM_PAINT:
-		hdc = BeginPaint(hwnd, &ps);
-		Ellipse(hdc, x - 20, y - 20, x + 20, y + 20);
-		EndPaint(hwnd, &ps);
-		return 0;
-
-	case WM_KEYDOWN:
-		if (wParam == VK_RIGHT)
-		{
-			if (x < 1360)
-			{
-				x += 40;
-			}
-		}
-
-		if (wParam == VK_LEFT)
-		{
-			if (x > 20)
-				x -= 40;
-		}
-
-
-		if (wParam == VK_UP)
-		{
-			if (y > 20)
-				y -= 40;
-		}
-
-		if (wParam == VK_DOWN)
-		{
-			if (y < 660)
-				y += 40;
-		}
-
-		if (wParam == VK_HOME) {
-			x = 20;
-			y = 20;
-		}
-
-		InvalidateRgn(hwnd, NULL, TRUE);
-		break;
+	}		
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
 	switch (iMsg) {
