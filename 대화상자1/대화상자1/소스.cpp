@@ -153,8 +153,8 @@ LRESULT CALLBACK Dlg6_2Proc(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM lPar
 					y = 20;
 				}
 
-				InvalidateRgn(hwnd, NULL, TRUE);
 				break;
+
 			case ID_BUTTON_END:
 				EndDialog(hDlg, 0);
 				break;
