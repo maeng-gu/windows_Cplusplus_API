@@ -164,7 +164,7 @@ LRESULT CALLBACK Dlg6_2Proc(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM lPar
 		}
 	}		
 
-LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
+	LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
 	switch (iMsg) {
 	case WM_CREATE:
 		break;
