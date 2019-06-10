@@ -110,59 +110,37 @@ LRESULT CALLBACK Dlg6_1Proc(HWND hDlg, UINT iMsg, WPARAM wParam, LPARAM lParam) 
 	return 0;
 }
 LRESULT CALLBACK Dlg6_2Proc(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM lParam) {
-	HDC hdc; 
-	switch (iMessage) 
+	HDC hdc;
+	switch (iMessage)
 	{
-	case WM_COMMAND: 
-		switch (LOWORD(wParam)) 
+	case WM_PAINT:
+		//hdc = GetDC(hDlg);
+		//TextOut(hdc, 0, 0, _T("Hello World"), 11);
+		//ReleaseDC(hDlg, hdc); break;
+
+		x = 120; y = 60;
+		hdc = BeginPaint(hDlg, &ps);
+		Ellipse(hdc, x - 20, y - 20, x + 20, y + 20);
+		EndPaint(hDlg, &ps);
+		break;
+	case WM_COMMAND:
+		switch (LOWORD(wParam))
 		{
-			
-			case ID_BUTTON_PRINT:
-				hdc = GetDC(hDlg);
-				TextOut(hdc, 0, 0, _T("Hello World"), 11);
-				ReleaseDC(hDlg, hdc); break;
-				if (wParam == VK_RIGHT)
-				{
-					if (x < 1360)
-					{
-						x += 40;
-					}
-				}
-
-				if (wParam == VK_LEFT)
-				{
-					if (x > 20)
-						x -= 40;
-				}
+		case IDC_BUTTON1:
 
 
-				if (wParam == VK_UP)
-				{
-					if (y > 20)
-						y -= 40;
-				}
+		case ID_BUTTON_PRINT:
 
-				if (wParam == VK_DOWN)
-				{
-					if (y < 660)
-						y += 40;
-				}
-
-				if (wParam == VK_HOME) {
-					x = 20;
-					y = 20;
-				}
-
-				break;
-
-			case ID_BUTTON_END:
-				EndDialog(hDlg, 0);
-				break;
-			case IDCANCEL:
-				EndDialog(hDlg, 0);
-				break;
+		case ID_BUTTON_END:
+			EndDialog(hDlg, 0);
+			break;
+		case IDCANCEL:
+			EndDialog(hDlg, 0);
+			break;
 		}
-	}		
+	}
+	return 0;
+}
 
 	LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
 	switch (iMsg) {
@@ -172,6 +150,9 @@ LRESULT CALLBACK Dlg6_2Proc(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM lPar
 	case WM_LBUTTONDOWN:
 		DialogBox(hInst, MAKEINTRESOURCE(IDD_DIALOG6_2), hwnd,
 			Dlg6_2Proc);
+		break;
+	case WM_DESTROY:
+		PostQuitMessage(0);
 		break;
 	}
 	return

@@ -1,1 +1,2 @@
-﻿LINK : fatal error LNK1168: C:\Users\user\Documents\GitHub\windows_Cplusplus_API\대화상자1\x64\Debug\대화상자1.exe을(를) 쓰기용으로 열 수 없습니다.
+﻿  소스.cpp
+  대화상자1.vcxproj -> C:\Users\user\Documents\GitHub\windows_Cplusplus_API\대화상자1\x64\Debug\대화상자1.exe
