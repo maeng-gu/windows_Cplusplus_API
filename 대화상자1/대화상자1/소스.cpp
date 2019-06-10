@@ -1,9 +1,6 @@
 #include "resource.h"
-
 #include <windows.h>
-
 #include <TCHAR.H>
-
 
 HINSTANCE hInst;
 

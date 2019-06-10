@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "계산기", "계산기\계산기.vcxproj", "{4F935FB2-7EB2-418E-8A48-D45715C464E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F935FB2-7EB2-418E-8A48-D45715C464E8}.Debug|x64.ActiveCfg = Debug|x64
+		{4F935FB2-7EB2-418E-8A48-D45715C464E8}.Debug|x64.Build.0 = Debug|x64
+		{4F935FB2-7EB2-418E-8A48-D45715C464E8}.Debug|x86.ActiveCfg = Debug|Win32
+		{4F935FB2-7EB2-418E-8A48-D45715C464E8}.Debug|x86.Build.0 = Debug|Win32
+		{4F935FB2-7EB2-418E-8A48-D45715C464E8}.Release|x64.ActiveCfg = Release|x64
+		{4F935FB2-7EB2-418E-8A48-D45715C464E8}.Release|x64.Build.0 = Release|x64
+		{4F935FB2-7EB2-418E-8A48-D45715C464E8}.Release|x86.ActiveCfg = Release|Win32
+		{4F935FB2-7EB2-418E-8A48-D45715C464E8}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9B08669-BC05-4F3C-A10D-CF7BF5F403F7}
+	EndGlobalSection
+EndGlobal
